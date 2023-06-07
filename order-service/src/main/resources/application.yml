@@ -1,0 +1,15 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: ORDER-SERVICE
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+
+
